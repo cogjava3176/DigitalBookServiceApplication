@@ -1,0 +1,32 @@
+<div class="page-container">
+  <div style="text-align: center"><h1>SIGN UP</h1></div>
+  <div class="page-content">
+    <mat-card class="card">
+      <div class="input-text-container">
+        <mat-form-field class="input-field" appearance="fill">
+          <mat-label>Reader name</mat-label>
+          <input matInput [(ngModel)]="user.name">
+        </mat-form-field>
+      </div>
+      <div class="input-text-container">
+        <mat-form-field class="input-field" appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput [(ngModel)]="user.email">
+        </mat-form-field>
+      </div>
+      <div class="input-text-container">
+        <mat-form-field class="input-field" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput [(ngModel)]="user.password">
+        </mat-form-field>
+      </div>
+      <div class="input-text-container">
+        <mat-form-field class="input-field" appearance="fill">
+          <mat-label>Re-Password</mat-label>
+          <input type="password" matInput [(ngModel)]="rePassword">
+        </mat-form-field>
+      </div>
+      <button mat-flat-button color="primary" (click)="signup()">Signup</button>
+    </mat-card>
+  </div>
+</div>

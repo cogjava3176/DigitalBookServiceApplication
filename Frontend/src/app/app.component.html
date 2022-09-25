@@ -1,0 +1,16 @@
+<div style="position: fixed; width: 100vw; z-index: 99999">
+  <mat-toolbar color="primary">
+    <span>Digital Book</span>
+    <span style="flex: 1 1 auto"></span>
+    <div *ngIf="isLogin" style="display: flex">
+      <h6 class="menu-item" [routerLink]="'search-book'">All My Books</h6>
+      <h6 class="menu-item" (click)="logout()">Logout</h6>
+    </div>
+    <div *ngIf="!isLogin" style="display: flex">
+      <h6 class="menu-item" [routerLink]="'login'">Login</h6>
+    </div>
+  </mat-toolbar>
+</div>
+<div style="padding-top: 6rem">
+  <router-outlet></router-outlet>
+</div>
